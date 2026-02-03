@@ -14,12 +14,12 @@ def translate(word):
     elif len(get_close_matches(word,data.keys()))>0:
         print("Did you mean %s instead" %get_close_matches(word,data.keys())[0])
         decide = input("Press y for yes or n for no")
-        if(decide=='y'):
+        if decide=='y':
             return data[get_close_matches(word,data.keys)[0]]
-        elif (decide == 'n'):
+        elif decide == 'n':
             return ("Pugger your paws stepped on wrong keys")
         else:
-            return ("You have entered wrong input please just enter y or n")
+            return ("You have entered wrong input please just enter y or n: ")
     else:
         print("Pugger your paws stepped on wrong keys")
 
@@ -31,4 +31,3 @@ if type(output)==list:
         print(item)
 else:
     print(output)
-
